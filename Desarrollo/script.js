@@ -8,7 +8,7 @@ const contenedorPadreColores = document.getElementById(
   "espacio-contenedores-colores",
 );
 
-const botonSeisColores = document.querySelector(".boton-seis-colores");
+const botonSeisColores = document.querySelector("#boton-seis-colores");
 
 botonSeisColores.addEventListener("click", function () {
   contenedorPadreColores.innerHTML = "";
@@ -21,7 +21,7 @@ botonSeisColores.addEventListener("click", function () {
   console.log("Vas a crear 6 colores aleatorios");
 });
 
-const botonOchoColores = document.querySelector(".boton-ocho-colores");
+const botonOchoColores = document.querySelector("#boton-ocho-colores");
 
 botonOchoColores.addEventListener("click", function () {
   contenedorPadreColores.innerHTML = "";
@@ -33,7 +33,7 @@ botonOchoColores.addEventListener("click", function () {
   console.log("Vas a crear 8 colores aleatorios");
 });
 
-const botonNueveColores = document.querySelector(".boton-nueve-colores");
+const botonNueveColores = document.querySelector("#boton-nueve-colores");
 
 botonNueveColores.addEventListener("click", function () {
   contenedorPadreColores.innerHTML = "";
