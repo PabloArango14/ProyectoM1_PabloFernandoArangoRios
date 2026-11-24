@@ -3,7 +3,7 @@ const contenedorPadreColores = document.getElementById(
   "espacio-contenedores-colores",
 );
 
-function definirColor(params) {
+function definirColor() {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
   const b = Math.floor(Math.random() * 256);
