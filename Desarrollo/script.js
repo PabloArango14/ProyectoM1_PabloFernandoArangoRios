@@ -2,13 +2,24 @@ const botonPrincipal = document.getElementById("botonPrincipal");
 const contenedorPadreColores = document.getElementById(
   "espacio-contenedores-colores",
 );
+
+function definirColor(params) {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 botonPrincipal.addEventListener("click", function () {
   if (contenedorPadreColores.innerHTML === "") {
     alert("Primero debes seleccionar cuántos colores quieres generar");
   } else {
     const contenedoresColores = document.querySelectorAll(".contenedor-color");
     for (let index = 0; index < contenedoresColores.length; index++) {
-      contenedoresColores[index].style.backgroundColor = "#1e1e1e";
+      const colorDefinido = definirColor();
+      contenedoresColores[index].style.backgroundColor = colorDefinido;
+      contenedoresColores[index].textContent = colorDefinido;
     }
   }
 });
