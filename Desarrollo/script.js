@@ -1,12 +1,12 @@
 const botonPrincipal = document.getElementById("botonPrincipal");
-
-botonPrincipal.addEventListener("click", function () {
-  console.log("presionaste el botón principal");
-});
-
 const contenedorPadreColores = document.getElementById(
   "espacio-contenedores-colores",
 );
+botonPrincipal.addEventListener("click", function () {
+  if (contenedorPadreColores.innerHTML === "") {
+    console.log("Primero debes seleccionar cuántos colores quieres generar");
+  }
+});
 
 const botonSeisColores = document.querySelector("#boton-seis-colores");
 
@@ -44,4 +44,10 @@ botonNueveColores.addEventListener("click", function () {
   }
 
   console.log("Vas a crear 9 colores aleatorios");
+});
+
+const botonBorrar = document.getElementById("borrar-contenedores-de-colores");
+
+botonBorrar.addEventListener("click", function () {
+  contenedorPadreColores.innerHTML = "";
 });
